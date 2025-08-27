@@ -1,4 +1,4 @@
-# MP1: Modeling Moderation Decisions
+# MP1: Modeling Moderation Decisions (Due: 11:59pm on Sep 10, 2025)
 
 This repository contains the instructions and necessary resources for the first mini-project of the semester!
 
@@ -34,8 +34,9 @@ pd.read_csv('./mp1-data.csv', index_col=0)
 * Google Colab is a free resource that gives you computing resources. This includes some limited GPU access.
 
 ### What to submit:
+Submit the following files to the MP-1 assignment on Canvas by 11:59 PM on Sep 10, 2025:
 * *Your Python code:* you can write a Python script or do your modeling in a notebook
-* *A written report:* Include a PDF file of a few paragraphs describing your approach, what other methods you tried, and a summary of what you found/your model's accuracy. 
+* *A written report:* Include a PDF file of a few paragraphs describing your approach, what other methods you tried, and the model's performance during validation. 
 * *Your model's predictions:* a `predictions-[NETID].csv` file with your model's predictions ont he entire dataset. See the below section for specific details on formatting your predictions for submission.
 
 #### Formatting the submitted predictions
