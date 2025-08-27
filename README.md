@@ -35,7 +35,7 @@ pd.read_csv('./mp1-data.csv', index_col=0)
 
 ### What to submit:
 * *Your Python code:* you can write a Python script or do your modeling in a notebook
-* *A written report:* Include a few paragraphs describing your approach, what other methods you tried, and a summary of what you found/your model's accuracy. 
+* *A written report:* Include a PDF file of a few paragraphs describing your approach, what other methods you tried, and a summary of what you found/your model's accuracy. 
 * *Your model's predictions:* a `predictions-[NETID].csv` file with your model's predictions ont he entire dataset. See the below section for specific details on formatting your predictions for submission.
 
 #### Formatting the submitted predictions
