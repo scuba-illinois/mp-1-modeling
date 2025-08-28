@@ -53,7 +53,7 @@ Submit the following files to the MP-1 assignment on Canvas by 11:59 PM on Sep 1
 * *A written report for both tasks:* Using [this](https://docs.google.com/document/d/1zBLe6tQo1JXezl5mzyuEwdaBCpqtMOhZ9N4rQ1z_MLk/edit?usp=drive_link) template, include a PDF file of a few paragraphs describing your approach for each task, what methods you tried, and the model's performance on a holdout set.
     * For task 2, include the following table reporting how each model performs on each subreddit's data on a holdout set. Compare the performance of the global model vs. the subreddit-specific models.
 
- | Subreddit | Accuracy of Global Model | Accuracy of r/science Model | Accuracy of r/science Model | Accuracy of r/science Model|
+ | Subreddit | Accuracy of Global Model | Accuracy of r/science Model | Accuracy of r/Futurology Model | Accuracy of r/askscience Model|
 | ---- | ---- | ---- | ---- | ---- |
 | r/science
 | r/Futurology
