@@ -23,6 +23,8 @@ Given this variability in community norms, we are providing you with a dataset c
 
 You can access the dataset in the course Google Drive Mini Project folder [here](https://drive.google.com/drive/folders/1kgXkjtvMU0k9SE9R8Cui_XkELef9RMx-?usp=drive_link).
 
+Enable Google Apps @ Illinois [here](https://cloud-dashboard.illinois.edu/) before being able to access Google Drive files using your Illinois account! 
+
 ### Files
 
 * `./mp1-data-train.csv` -- the training dataset
