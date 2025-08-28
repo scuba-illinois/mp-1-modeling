@@ -47,6 +47,12 @@ task2_holdout = pd.read_csv('./mp1-task-2-holdout.csv', index_col=0)
 
 ### Tips:
 * Google Colab is a free resource that gives you computing resources. This includes some limited GPU access.
+* Here are some potentially useful resources to get you started with your modeling setup:
+   * Using BERT: [Conversations Gone Alright: Quantifying and Predicting
+Prosocial Outcomes in Online Conversations](https://drive.google.com/file/d/1-DGqgtXOBt3u_yVzM5YovLECZur4GqzN/view)
+   * Using Sklearn: [Conversational Resilience: Quantifying and Predicting Conversational Outcomes Following Adverse Events](https://ojs.aaai.org/index.php/ICWSM/article/view/19314) and [The Bag of Communities: Identifying Abusive Behavior Online with Preexisting Internet Data](https://dl.acm.org/doi/abs/10.1145/3025453.3026018)
+   * Using LLMs: [MoMoE: Mixture of Moderation Experts Framework
+for AI-Assisted Online Governance](https://arxiv.org/pdf/2505.14483)
 
 ## What to submit:
 Submit the following files to the MP-1 assignment on Canvas by 11:59 PM on Sep 10, 2025:
@@ -102,3 +108,4 @@ You will be evaluated on the tasks as follows:
     * (1 point) Global model is implemented
     * (1 point) Subreddit-specific models are implemented
 * (1 point) Holdout set performance as reported in the written report.
+
