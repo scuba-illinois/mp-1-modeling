@@ -9,9 +9,9 @@ However, because Reddit allows its communities to institute their own rules, if 
 
 With this nuance in mind, you have two tasks:
 
-**Task 1:** *train ML models to predict whether a comment would be removed by the moderators of its community*. As indicated in the report template, use cross validation and report the model performance. You will be evaluated based on your predictions on a hidden test set.
+**Task 1:** *train ML models to predict whether a comment would be removed by the moderators of its community*. As indicated in the grading section (see end of this document), use cross validation and report the model performance.
 
-**Task 2:** *train a global Science model and 3 individual community models for r/science, r/Futurology, and r/askscience.* You will be evaluated on your written analysis comparing the performance of these models on a validation set.
+**Task 2:** *train a global Science model and 3 individual community models for r/science, r/Futurology, and r/askscience.*
 
 ## Data
 
@@ -46,7 +46,7 @@ task2_holdout = pd.read_csv('./mp1-task-2-holdout.csv', index_col=0)
 ### Tips:
 * Google Colab is a free resource that gives you computing resources. This includes some limited GPU access.
 
-### What to submit:
+## What to submit:
 Submit the following files to the MP-1 assignment on Canvas by 11:59 PM on Sep 10, 2025:
 * *Your Python code:* you can write a Python script or do your modeling in a notebook
 * *Your model's predictions for task 1:* a `predictions-[NETID].csv` file with your model's predictions on the test dataset. See the next section for specific details on formatting your predictions for submission.
@@ -83,3 +83,20 @@ id,prediction
 3,0
 ...
 ```
+
+## Grading
+
+You will be evaluated on the tasks as follows:
+
+**Task 1:**
+* (2 points) Report template is completed.
+* (1 points) Having a reasonable model architecture implemented in code
+* (1 point) Cross validation performance as reported in the written report.
+* (1 point) Performance on test set
+
+**Task 2:**
+* (2 points) Report template is completed.
+* (2 points) Having a reasonable model architecture implemented in code
+    * (1 point) Global model is implemented
+    * (1 point) Subreddit-specific models are implemented
+* (1 point) Holdout set performance as reported in the written report.
