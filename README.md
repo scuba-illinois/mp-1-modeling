@@ -1,13 +1,17 @@
-# MP1: Modeling Moderation Decisions (Due: 11:59pm on Sep 10, 2025)
+# MP-1: Modeling Moderation Decisions (Due: 11:59pm on Sep 10, 2025)
 
 This repository contains the instructions and necessary resources for the first mini-project of the semester!
 
 ## Overview
 
-Moderators of online communities like Reddit are often weighed down by the manual task of sifting through massive amounts of user-generated content to pick out instances of norm violations. Researchers are often trying to build tools and models that can speed up the process of removing harmful content and potentially prevent further violations. 
+Moderators of online communities like Reddit are often weighed down by the manual task of sifting through massive amounts of user-generated content to pick out instances of norm violations. Researchers are often trying to build tools and models that can help triage harmful content for moderators and potentially prevent further violations. 
 However, because Reddit allows its communities to institute their own rules, if you look from one community to another you might find that completely different behavior is considered norm-violating. From this flexibility comes the challenge of building helpful models of norm-violating content that can effectively assist moderators across the platform with their duties. 
 
-With this nuance in mind, your task is to *train a model to predict whether a comment would be removed by the moderators of its community*.
+With this nuance in mind, you have two tasks:
+
+**Task 1:** *train ML models to predict whether a comment would be removed by the moderators of its community*. As indicated in the report template, use cross validation and report the model performance. You will be evaluated based on your predictions on a hidden test set.
+
+**Task 2:** *train a global Science model and 3 individual community models for r/science, r/Futurology, and r/askscience.* You will be evaluated on your written analysis comparing the performance of these models on a validation set.
 
 ## Data
 
@@ -25,9 +29,10 @@ You can access the dataset in the course Google Drive Mini Project folder [here]
   * `id`: unique identifier for each comment. Make sure these do not change, they are needed to evaluate your model's accuracy.
   * `body`: the body of the comment
   * `subreddit`: the subreddit where the comment was originally posted
-  * `removed`: whether the comment was removed from the subreddit. The rows (n=26,500) with null `removed` values are the **test set**. We will evaluate your model's accuracy on the test data. 
+  * `removed`: whether the comment was removed from the subreddit (0 if comment was not removed, 1 if comment is removed). The rows (n=26,500) with null `removed` values are the **test set**. We will evaluate your model's accuracy on the test data. 
   * `context`: the text of the parent comment.
 * `./mp1-data-test.csv` -- the test dataset; your objective is to predict whether these comments would be removed by the moderators of its community.
+* `./mp1-task-2-holdout.csv` -- the holdout set for task 2. You should use this data to evaluate your global and subreddit-specific models trained for task 2.
 
 Once you've downloaded the data, you can use the following code snippet to load it in properly.
 
@@ -35,6 +40,7 @@ Once you've downloaded the data, you can use the following code snippet to load 
 import pandas as pd
 train_df = pd.read_csv('./mp1-data-train.csv', index_col=0)
 test_df = pd.read_csv('./mp1-data-test.csv', index_col=0)
+task2_holdout = pd.read_csv('./mp1-task-2-holdout.csv', index_col=0)
 ```
 
 ### Tips:
@@ -43,13 +49,21 @@ test_df = pd.read_csv('./mp1-data-test.csv', index_col=0)
 ### What to submit:
 Submit the following files to the MP-1 assignment on Canvas by 11:59 PM on Sep 10, 2025:
 * *Your Python code:* you can write a Python script or do your modeling in a notebook
-* *A written report:* Include a PDF file of a few paragraphs describing your approach, what other methods you tried, and the model's performance during validation. 
-* *Your model's predictions:* a `predictions-[NETID].csv` file with your model's predictions on the test dataset. See the below section for specific details on formatting your predictions for submission.
+* *Your model's predictions for task 1:* a `predictions-[NETID].csv` file with your model's predictions on the test dataset. See the next section for specific details on formatting your predictions for submission.
+* *A written report for both tasks:* Include a PDF file of a few paragraphs describing your approach for each task, what methods you tried, and the model's performance on a holdout set.
+    * For task 2, include the following table reporting how each model performs on each subreddit's data on a holdout set. Compare the performance of the global model vs. the subreddit-specific models.
+
+ | Subreddit | Accuracy of Global Model | Accuracy of r/science Model | Accuracy of r/science Model | Accuracy of r/science Model|
+| ---- | ---- | ---- | ---- | ---- |
+| r/science
+| r/Futurology
+| r/askscience
+
 
 #### Formatting the submitted predictions
 
 You should submit predictions for the test dataset in a file called `predictions-[NETID].csv` (replace `[NETID]` with your Illinois net ID).
-* Te submitted file should contain 26,500 rows, one for each row in the test dataset
+* The submitted file should contain 26,500 rows, one for each row in the test dataset
 * The file should have only two columns: `id` and `prediction`. 
 * The `id` column should contain the original `id` from the dataset and the `prediction` should be the output of your model, 0 if you predict the comment wasn't removed and 1 if you predict it was.
 
