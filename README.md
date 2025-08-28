@@ -50,7 +50,7 @@ task2_holdout = pd.read_csv('./mp1-task-2-holdout.csv', index_col=0)
 Submit the following files to the MP-1 assignment on Canvas by 11:59 PM on Sep 10, 2025:
 * *Your Python code:* you can write a Python script or do your modeling in a notebook
 * *Your model's predictions for task 1:* a `predictions-[NETID].csv` file with your model's predictions on the test dataset. See the next section for specific details on formatting your predictions for submission.
-* *A written report for both tasks:* Include a PDF file of a few paragraphs describing your approach for each task, what methods you tried, and the model's performance on a holdout set.
+* *A written report for both tasks:* Using [this](https://docs.google.com/document/d/1zBLe6tQo1JXezl5mzyuEwdaBCpqtMOhZ9N4rQ1z_MLk/edit?usp=drive_link) template, include a PDF file of a few paragraphs describing your approach for each task, what methods you tried, and the model's performance on a holdout set.
     * For task 2, include the following table reporting how each model performs on each subreddit's data on a holdout set. Compare the performance of the global model vs. the subreddit-specific models.
 
  | Subreddit | Accuracy of Global Model | Accuracy of r/science Model | Accuracy of r/science Model | Accuracy of r/science Model|
