@@ -7,7 +7,18 @@ This repository contains the instructions and necessary resources for the first 
 Moderators of online communities like Reddit are often weighed down by the manual task of sifting through massive amounts of user-generated content to pick out instances of norm violations. Researchers are often trying to build tools and models that can help triage harmful content for moderators and potentially prevent further violations. 
 However, because Reddit allows its communities to institute their own rules, if you look from one community to another you might find that completely different behavior is considered norm-violating. From this flexibility comes the challenge of building helpful models of norm-violating content that can effectively assist moderators across the platform with their duties. 
 
-With this nuance in mind, you have two tasks:
+## Learning Objectives
+
+By the end of this MP, you will be able to:
+
+* Work with the `pandas` Python library
+* Use Python packages to train a prediction model with cross validation
+* Describe your model performance and synthesize insights
+  
+
+## Your Tasks
+
+For this MP, you have two tasks:
 
 **Task 1:** *train ML models to predict whether a comment would be removed by the moderators of its community*. As indicated in the grading section (see end of this document), use cross validation and report the model performance.
 
